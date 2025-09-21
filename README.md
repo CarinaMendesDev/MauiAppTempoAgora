@@ -1,4 +1,4 @@
-# ☁️ App TempoAgora - Agenda 7
+# 🌦️App TempoAgora App TempoAgora - Agenda 7
 
 Este projeto faz parte da disciplina **Desenvolvimento de Sistemas III - Programação Mobile II**  
 O foco é a **integração com APIs externas** utilizando **.NET MAUI** e o consumo de dados via **Web Services**.  
