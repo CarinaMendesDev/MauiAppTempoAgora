@@ -8,7 +8,7 @@
     Title="🌦️MauiAppTempoAgora">
 
     <ShellContent
-        Title="🌦️MauiAppTempoAgora"
+        Title="🌦️App Tempo Agora"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
