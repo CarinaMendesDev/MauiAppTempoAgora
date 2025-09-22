@@ -63,7 +63,6 @@ Esses campos já estavam presentes no JSON da API e foram mapeados no modelo `Te
 
 ### ✅ Parte 2 – Tratamento de Erros  
 - Exibição de mensagem específica quando o nome da cidade não for encontrado (**404 Not Found**).  
-- Exibição de alerta quando o usuário estiver sem internet.  
 
 O tratamento foi implementado com base no `HttpResponseMessage.StatusCode`.  
 
@@ -72,16 +71,17 @@ O tratamento foi implementado com base no `HttpResponseMessage.StatusCode`.
 ## ⚙️ Desafios Enfrentados  
 - Ajustar o **modelo C#** para refletir os novos campos do JSON.  
 - Garantir que erros de conexão não fechassem o app.  
-- Simular cenários de erro para validar as mensagens (cidade inválida, offline, etc.).  
+- Simular cenários de erro para validar as mensagens (cidade inválida).  
 
 ---
 
 ## 📸 Evidências  
-*(prints de tela )*  
+<img width="373" height="555" alt="image" src="https://github.com/user-attachments/assets/5a8b7fc4-53e4-4196-aa92-69ce6d1c6793" />
 
-- Consulta de cidade com dados completos.  
+- Consulta de cidade com dados completos.
+- <img width="372" height="553" alt="image" src="https://github.com/user-attachments/assets/5ddbe5d2-6b59-453b-8321-6694a10d4fa6" />
+  
 - Erro de cidade inexistente.  
-- Alerta de falta de conexão.  
 
 ---
 
