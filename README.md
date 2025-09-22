@@ -64,7 +64,8 @@ Foram adicionadas as seguintes informações ao resultado exibido:
   
 ### 🔹 Parte 2 – Tratamento de Erros
 
-- Cidade não encontrada (404).  
+- Ao clicar sem o nome da cidade a mensagem “Preencher o nome da cidade”, aparece abaixo.
+- Cidade não encontrada.  
 - Sem conexão com a internet.
 O tratamento foi implementado com base no `HttpResponseMessage.StatusCode`.  
 
@@ -72,10 +73,12 @@ O tratamento foi implementado com base no `HttpResponseMessage.StatusCode`.
 
 ## ⚙️ Desafios Enfrentados
 
-- Ajustar o **modelo C#** para refletir os novos campos do JSON.  
-- Garantir que erros de conexão não fechassem o app.  
-- Simular cenários de erro para validar as mensagens (cidade inválida).  
-
+- Ajustar o código para utilizar corretamente os nomes dos elementos da interface
+- Corrigir erros de sintaxe no tratamento de condições (`if/else`) e fechamento de blocos.  
+- Tratar cenários de erro retornados pela API, como cidade inexistente  e sem conexão de internet.  
+- Converter corretamente os horários de nascer e pôr do sol, que vêm como Unix Timestamp, para o formato legível em horas e minutos.  
+- Exibir a temperatura mínima e máxima com símbolo de graus Celsius (ºC) de forma clara para o usuário.
+  
 ---
 
 ## 📸 Evidências
