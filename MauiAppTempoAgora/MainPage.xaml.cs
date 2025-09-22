@@ -1,4 +1,8 @@
-﻿namespace MauiAppTempoAgora
+﻿using System.Threading.Tasks;
+using MauiAppTempoAgora.Models;
+using MauiAppTempoAgora.Services;
+
+namespace MauiAppTempoAgora
 {
     public partial class MainPage : ContentPage
     {
@@ -9,17 +13,45 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            count++;
+            try
+            {
+                if (!string.IsNullOrEmpty(cidadeEntry.Text))
+                {
+                    Tempo? t = await DataService.GetPrevisao(cidadeEntry.Text);
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+                    if (t != null)
+                    {
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+                        string dados_previsao = "";
+
+                        dados_previsao += $"Latitude: {t.lat}\n";
+                        dados_previsao += $"Longitude: {t.lon}\n";
+                        dados_previsao += $"Nascer do Sol: {t.sunrise}\n";
+                        dados_previsao += $"Pôr do Sol: {t.sunset}\n";
+                        dados_previsao += $"Temperatura Min: {t.temp_min} ºC\n";
+                        dados_previsao += $"Temperatura Max: {t.temp_max} ºC\n";
+
+                        resultadoLabel.Text = dados_previsao;
+
+                    }
+                    else
+                    {
+                        resultadoLabel.Text = "Sem dados de Previsão";
+                    }
+                }
+                else
+                {
+                    resultadoLabel.Text = "Preencha a cidade.";
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Erro", ex.Message, "OK");
+
+            }
         }
     }
-
 }
+

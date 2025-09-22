@@ -5,10 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiAppTempoAgora"
     Shell.FlyoutBehavior="Disabled"
-    Title="MauiAppTempoAgora">
+    Title="🌦️MauiAppTempoAgora">
 
     <ShellContent
-        Title="Home"
+        Title="🌦️MauiAppTempoAgora"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
