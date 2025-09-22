@@ -32,6 +32,10 @@ namespace MauiAppTempoAgora
                         dados_previsao += $"Pôr do Sol: {t.sunset}\n";
                         dados_previsao += $"Temperatura Min: {t.temp_min} ºC\n";
                         dados_previsao += $"Temperatura Max: {t.temp_max} ºC\n";
+                        dados_previsao += $"Descrição: {t.description}\n";
+                        dados_previsao += $"Velocidade do Vento: {t.speed} m/s\n";
+                        dados_previsao += $"Visibilidade: {t.visibility} m\n";
+
 
                         resultadoLabel.Text = dados_previsao;
 
@@ -43,7 +47,7 @@ namespace MauiAppTempoAgora
                 }
                 else
                 {
-                    resultadoLabel.Text = "Preencha a cidade.";
+                    resultadoLabel.Text = "Preencha o nome da cidade.";
                 }
             }
             catch (Exception ex)
