@@ -102,6 +102,55 @@ Essa atividade reforçou conceitos de **consumo de APIs REST**, **serialização
 
 ---
 
+## ✅ **Agenda 8 — 🌍 Desenvolvimento Mobile com Sensores móveis e geolocalização (.NET MAUI)**
+
+Os smartphones possuem **sensores** que permitem maior interação com o ambiente e fornecem dados para aplicações móveis.  
+
+**Sensores Comuns:**
+- 📍 **GPS (Geolocalização)** → posição geográfica do dispositivo.  
+- ↕️ **Acelerômetro** → detecção de movimento/inclinação.  
+- 🔄 **Giroscópio** → orientação e rotação.  
+- 🧭 **Magnetômetro** → usado como bússola.  
+- 💡 **Sensor de Luz** → intensidade luminosa do ambiente.  
+- 📶 **Proximidade** → detecta objetos próximos.  
+
+**APIs do .NET MAUI:**
+- `Geolocation` → obtém latitude e longitude.  
+- `GeolocationRequest` → configura precisão e tempo limite.  
+- `Geocoding` → converte coordenadas em endereços legíveis e vice-versa.  
+- `WebView` → permite exibir conteúdo da web (HTML, mapas, sites interativos) dentro do app. 
+
+---
+
+## ⚙️ Desafios Enfrentados
+- Solicitar e tratar permissões de localização no app.  
+- Implementar corretamente a API de geolocalização e lidar com GPS desligado.  
+- Converter coordenadas para endereços legíveis de forma precisa.  
+
+---
+
+## 📌 Funcionalidades Implementadas
+- Uso da API `Geolocation` para capturar a posição atual do usuário.  
+- Conversão de latitude/longitude em endereço com `Geocoding`.  
+- Tratamento de erros e exceções comuns:  
+  - `PermissionException` (permissão negada).  
+  - `FeatureNotEnabledException` (GPS desativado).  
+- Exibição de conteúdo da web dentro do app utilizando **WebView** (ex.: mapas interativos).  
+
+---
+
+## 📸 Evidências
+📍 Consulta de localização via GPS (latitude/longitude).  
+🗺️ Conversão de coordenadas em endereço com `Geocoding`.  
+🌐 Exibição de mapa interativo com WebView.  
+
+---
+
+## 📝 Conclusão
+Na **Agenda 8**, o app 🌦️Tempo Agora foi expandido com recursos de **sensores móveis e geolocalização**, fortalecendo a interação com o ambiente.  
+
+---
+
 ## 🛠 Tecnologias Utilizadas
 - **.NET MAUI** — Framework multiplataforma.  
 - **C#** — Linguagem de programação.  
