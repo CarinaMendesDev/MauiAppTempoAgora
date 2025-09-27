@@ -143,6 +143,7 @@ Os smartphones possuem **sensores** que permitem maior interação com o ambient
 📍 Consulta de localização via GPS (latitude/longitude).  
 🗺️ Conversão de coordenadas em endereço com `Geocoding`.  
 🌐 Exibição de mapa interativo com WebView.  
+<img width="520" height="719" alt="image" src="https://github.com/user-attachments/assets/5b1c6b6e-8c77-4c7f-9118-6ead0e739f14" />
 
 ---
 
