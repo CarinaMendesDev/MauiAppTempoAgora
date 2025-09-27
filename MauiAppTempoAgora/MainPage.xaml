@@ -8,18 +8,15 @@
             Padding="30,0"
             Spacing="25">
 
-            <Entry
-                x:Name="cidadeEntry"
-                Placeholder="Digite o nome da cidade"
-                FontSize="18"
-                HorizontalOptions="Fill" />
-            <Button Text="Buscar" Clicked="Button_Clicked"/>
-            <Label
-                x:Name="resultadoLabel"
-                FontSize="18"
-                TextColor="Black"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" />
+            <Button Text="Minha Localização" Clicked="Button_Clicked_Localizacao" />
+            <Label x:Name="lbl_coords" />
+            
+            <Entry x:Name="txt_cidade" />
+            <Button Text="Buscar Previsao" Clicked="Button_Clicked_Previsao" />
+           
+            <Label x:Name="lbl_res" FontSize="18" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <WebView x:Name="wv_mapa" HeightRequest="500" />
 
 
         </VerticalStackLayout>
