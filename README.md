@@ -142,8 +142,16 @@ Os smartphones possuem **sensores** que permitem maior interação com o ambient
 ## 📸 Evidências
 📍 Consulta de localização via GPS (latitude/longitude).  
 🗺️ Conversão de coordenadas em endereço com `Geocoding`.  
-🌐 Exibição de mapa interativo com WebView.  
-<img width="520" height="719" alt="image" src="https://github.com/user-attachments/assets/5b1c6b6e-8c77-4c7f-9118-6ead0e739f14" />
+🌐 Exibição de mapa interativo com WebView. 
+
+### 🔹 Consulta de cidade com dados completos.
+<img width="330" height="460" alt="image" src="https://github.com/user-attachments/assets/e0dca6e6-6b30-4f73-9f15-327349bb4216" />
+
+### 🔹 Erro de cidade inexistente.
+<img width="330" height="460" alt="image" src="https://github.com/user-attachments/assets/56fb3c9f-7938-4815-9e0c-9f31a85dd998" />
+
+### 🔹 Erro Sem Conexão a Internet.
+<img width="330" height="460" alt="image" src="https://github.com/user-attachments/assets/503ae2a2-2d7c-48c0-a1e3-3490e683a725" />
 
 ---
 
