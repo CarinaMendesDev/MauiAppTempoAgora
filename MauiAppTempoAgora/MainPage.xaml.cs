@@ -81,7 +81,7 @@ namespace MauiAppTempoAgora
 
                     string local_disp = $"📍Latitude: {local.Latitude}\n" +
                                         $"📍Longitude: {local.Longitude}\n" +
-                                        $"🏙️Cidade: {cidade}\n" +
+                                       // $"🏙️Cidade: {cidade}\n" +
                                         $"📅Data: {local.Timestamp.ToLocalTime():dd/MM/yyyy}\n" +
                                         $"🕒Hora: {local.Timestamp.ToLocalTime():HH:mm}";
                   
@@ -110,7 +110,7 @@ namespace MauiAppTempoAgora
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Erro", ex.Message, "OK");
+                await DisplayAlert("Erro: Sem Conexão a Internet", ex.Message, "OK");
             }
 
         }
@@ -125,7 +125,13 @@ namespace MauiAppTempoAgora
 
                 if (place != null)
                 {
-                    return place.Locality ?? "Cidade não encontrada";
+                    // tenta pegar o nome da cidade em diferentes propriedades
+                    return place.Locality
+                           ?? place.SubAdminArea
+                           ?? place.AdminArea
+                           ?? place.FeatureName
+                           ?? place.SubLocality
+                           ?? "Cidade não encontrada";
                 }
             }
             catch (Exception ex)

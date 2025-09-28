@@ -1,25 +1,88 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiAppTempoAgora.MainPage">
+             x:Class="MauiAppTempoAgora.MainPage"
+             BackgroundColor="#F5F5F5">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <VerticalStackLayout Padding="10" Spacing="8">
 
-            <Button Text="Minha Localização" Clicked="Button_Clicked_Localizacao" />
-            <Label x:Name="lbl_coords" />
-            
-            <Entry x:Name="txt_cidade" />
-            <Button Text="Buscar Previsao" Clicked="Button_Clicked_Previsao" />
-           
-            <Label x:Name="lbl_res" FontSize="18" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" />
+            <!-- Linha com botão Minha Localização à esquerda e campo/botão Buscar à direita -->
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="5">
+                <!-- Botão Minha Localização -->
+                <Button Text="Minha Localização"
+                        BackgroundColor="#2196F3"
+                        TextColor="White"
+                        CornerRadius="6"
+                        HeightRequest="35"
+                        FontSize="14"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="Button_Clicked_Localizacao"
+                        Grid.Column="0"/>
 
-            <WebView x:Name="wv_mapa" HeightRequest="500" />
+                <!-- Campo cidade + botão Buscar -->
+                <Frame BackgroundColor="White"
+                       CornerRadius="6"
+                       HasShadow="False"
+                       Padding="5"
+                       HorizontalOptions="FillAndExpand"
+                       Grid.Column="1">
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="5">
+                        <Entry x:Name="txt_cidade"
+                               Placeholder="Digite a cidade"
+                               FontSize="14"
+                               HeightRequest="30"
+                               HorizontalOptions="FillAndExpand"/>
+                        <Button Text="Buscar"
+                                BackgroundColor="#4CAF50"
+                                TextColor="White"
+                                CornerRadius="4"
+                                FontSize="14"
+                                HeightRequest="30"
+                                WidthRequest="80"
+                                Clicked="Button_Clicked_Previsao" 
+                                Grid.Column="1"/>
+                    </Grid>
+                </Frame>
+            </Grid>
 
+            <!-- Localização e Previsão lado a lado -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="6"
+                   HasShadow="False"
+                   Padding="5">
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="5">
+                    <VerticalStackLayout Grid.Column="0" Spacing="2">
+                        <Label Text="📍Minha Localização:"
+                               FontSize="12"
+                               TextColor="#666"/>
+                        <Label x:Name="lbl_coords"
+                               FontSize="14"
+                               TextColor="#333"/>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Column="1" Spacing="2">
+                        <Label Text="🌍Previsão da Cidade Digitada:"
+                               FontSize="12"
+                               TextColor="#666"/>
+                        <Label x:Name="lbl_res"
+                               FontSize="14"
+                               TextColor="#333"/>
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <!-- Mapa -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="6"
+                   HasShadow="False"
+                   Padding="0">
+                <WebView x:Name="wv_mapa"
+                         HeightRequest="300"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand" />
+            </Frame>
 
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
